@@ -61,3 +61,33 @@ Her yarımızı özyenilemeli olarak sıralayalım:
 b-
 
 O(n log n)
+
+## Proje 3
+
+**\[7, 5, 1, 8, 3, 6, 0, 9, 4, 2\]** dizisinin Binary-Search-Tree aşamalarını yazınız.
+
+**Örnek:** root x'dir. root'un sağından y bulunur. Solunda z bulunur vb.
+
+### Cevap 3
+
+1. Dizinin ilk elemanını kök olarak ayarla: 7.
+
+2. 5, 1, 8, 3, 6, 0, 9, 4, 2 elemanlarını sırayla köke ekleyelim:
+
+    - 5: 5, kökün solunda yer alır.
+
+    - 1: 1, kökün solunda yer alır.
+
+    - 8: 8, kökün sağına yerleşir.
+
+    - 3: 3, 1'in sağına yerleşir.
+
+    - 6: 6, 5'in sağına yerleşir.
+
+    - 0: 0, 1'in soluna yerleşir.
+
+    - 9: 9, 8'in sağına yerleşir.
+
+    - 4: 4, 3'ün sağına yerleşir.
+
+    - 2: 2, 1'in sağına yerleşir.
