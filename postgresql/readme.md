@@ -211,3 +211,90 @@ GROUP BY country_id
 ORDER BY Count(*) DESC
 LIMIT 1;
 ```
+
+## Ödev 8
+
+1. **test** veritabanınızda **employee** isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
+2. Oluşturduğumuz **employee** tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
+3. Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
+4. Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
+
+## Cevap 8
+
+``` sql
+--1
+CREATE TABLE employee(
+ id serial PRIMARY KEY,
+ name VARCHAR(50) NOT NULL,
+ birthday DATE NOT NULL,
+ email VARCHAR(50) NOT NULL;
+);
+
+--2
+INSERT INTO employee (id, name, birthday, email) values (1, 'Isadore Franciskiewicz', '1959-05-27', 'ifranciskiewicz0@wikia.com');
+INSERT INTO employee (id, name, birthday, email) values (2, 'Alric Mingasson', '1997-08-19', 'amingasson1@bloglines.com');
+INSERT INTO employee (id, name, birthday, email) values (3, 'Sim Erat', '1996-03-26', 'serat2@cdc.gov');
+INSERT INTO employee (id, name, birthday, email) values (4, 'Ofella Queen', '1961-04-12', 'oqueen3@google.cn');
+INSERT INTO employee (id, name, birthday, email) values (5, 'Lesli Emm', '1961-07-26', 'lemm4@spotify.com');
+INSERT INTO employee (id, name, birthday, email) values (6, 'Sawyere O'' Shea', '1990-11-23', 'so5@wufoo.com');
+INSERT INTO employee (id, name, birthday, email) values (7, 'Maurits Gabrieli', '1975-11-03', 'mgabrieli6@webs.com');
+INSERT INTO employee (id, name, birthday, email) values (8, 'Berri Reicharz', '1957-10-13', 'breicharz7@typepad.com');
+INSERT INTO employee (id, name, birthday, email) values (9, 'Eleni Fellini', '1977-07-25', 'efellini8@google.de');
+INSERT INTO employee (id, name, birthday, email) values (10, 'Iolanthe Readshall', '1985-06-17', 'ireadshall9@nih.gov');
+INSERT INTO employee (id, name, birthday, email) values (11, 'Brandyn O''Cleary', '1996-08-30', 'boclearya@addtoany.com');
+INSERT INTO employee (id, name, birthday, email) values (12, 'Emilee Magwood', '1961-06-22', 'emagwoodb@yelp.com');
+INSERT INTO employee (id, name, birthday, email) values (13, 'Jessamyn Records', '1967-07-24', 'jrecordsc@youku.com');
+INSERT INTO employee (id, name, birthday, email) values (14, 'Sebastian Greydon', '1993-10-17', 'sgreydond@blogger.com');
+INSERT INTO employee (id, name, birthday, email) values (15, 'Cairistiona Raymont', '1982-11-16', 'craymonte@bizjournals.com');
+INSERT INTO employee (id, name, birthday, email) values (16, 'Shawnee Bosence', '1973-01-28', 'sbosencef@hao123.com');
+INSERT INTO employee (id, name, birthday, email) values (17, 'Reynolds Malec', '1966-01-16', 'rmalecg@reuters.com');
+INSERT INTO employee (id, name, birthday, email) values (18, 'Jarvis Garment', '1984-09-04', 'jgarmenth@cnbc.com');
+INSERT INTO employee (id, name, birthday, email) values (19, 'Hamel Dyble', '2002-07-31', 'hdyblei@sun.com');
+INSERT INTO employee (id, name, birthday, email) values (20, 'Dulcea Abramino', '1999-11-10', 'dabraminoj@dedecms.com');
+INSERT INTO employee (id, name, birthday, email) values (21, 'Ettore Overstreet', '1977-02-04', 'eoverstreetk@ehow.com');
+INSERT INTO employee (id, name, birthday, email) values (22, 'Marysa Starling', '1979-03-09', 'mstarlingl@disqus.com');
+INSERT INTO employee (id, name, birthday, email) values (23, 'Raimondo O''Doireidh', '1991-09-29', 'rodoireidhm@feedburner.com');
+INSERT INTO employee (id, name, birthday, email) values (24, 'Cacilia Coneau', '1992-08-30', 'cconeaun@barnesandnoble.com');
+INSERT INTO employee (id, name, birthday, email) values (25, 'Nan Tasseler', '1953-07-15', 'ntasselero@acquirethisname.com');
+INSERT INTO employee (id, name, birthday, email) values (26, 'Karlan Cawte', '1973-09-12', 'kcawtep@hugedomains.com');
+INSERT INTO employee (id, name, birthday, email) values (27, 'Mame Girardetti', '1996-03-04', 'mgirardettiq@ft.com');
+INSERT INTO employee (id, name, birthday, email) values (28, 'Stavro Senechault', '1994-10-12', 'ssenechaultr@themeforest.net');
+INSERT INTO employee (id, name, birthday, email) values (29, 'Amelia Ramos', '1954-07-23', 'aramoss@ifeng.com');
+INSERT INTO employee (id, name, birthday, email) values (30, 'Ortensia Holworth', '1972-10-15', 'oholwortht@g.co');
+INSERT INTO employee (id, name, birthday, email) values (31, 'Ferris Kermath', '1999-04-08', 'fkermathu@irs.gov');
+INSERT INTO employee (id, name, birthday, email) values (32, 'Berget Nother', '1989-11-17', 'bnotherv@facebook.com');
+INSERT INTO employee (id, name, birthday, email) values (33, 'Emilia Fieldsend', '2001-12-01', 'efieldsendw@china.com.cn');
+INSERT INTO employee (id, name, birthday, email) values (34, 'Iorgo Joannidi', '1988-08-25', 'ijoannidix@ameblo.jp');
+INSERT INTO employee (id, name, birthday, email) values (35, 'Eddy Bollam', '1981-08-09', 'ebollamy@shutterfly.com');
+INSERT INTO employee (id, name, birthday, email) values (36, 'Griswold Tegeller', '1961-10-06', 'gtegellerz@merriam-webster.com');
+INSERT INTO employee (id, name, birthday, email) values (37, 'Jobina McKane', '1965-12-20', 'jmckane10@instagram.com');
+INSERT INTO employee (id, name, birthday, email) values (38, 'Cilka Copello', '1969-04-21', 'ccopello11@bbc.co.uk');
+INSERT INTO employee (id, name, birthday, email) values (39, 'Bailie Earnshaw', '1970-07-13', 'bearnshaw12@goo.gl');
+INSERT INTO employee (id, name, birthday, email) values (40, 'Audra Dinley', '1950-04-04', 'adinley13@deviantart.com');
+INSERT INTO employee (id, name, birthday, email) values (41, 'Natala Bardey', '1951-03-04', 'nbardey14@devhub.com');
+INSERT INTO employee (id, name, birthday, email) values (42, 'Hetty Kenson', '1967-10-13', 'hkenson15@tinyurl.com');
+INSERT INTO employee (id, name, birthday, email) values (43, 'Sheba Wandrey', '2002-07-13', 'swandrey16@kickstarter.com');
+INSERT INTO employee (id, name, birthday, email) values (44, 'Pepillo Blinckhorne', '1966-06-17', 'pblinckhorne17@dailymail.co.uk');
+INSERT INTO employee (id, name, birthday, email) values (45, 'Louella Dealy', '1962-08-17', 'ldealy18@opera.com');
+INSERT INTO employee (id, name, birthday, email) values (46, 'Karine Minister', '1970-09-22', 'kminister19@imgur.com');
+INSERT INTO employee (id, name, birthday, email) values (47, 'Quint Ellson', '1993-03-16', 'qellson1a@china.com.cn');
+INSERT INTO employee (id, name, birthday, email) values (48, 'Adolf Byram', '1959-01-11', 'abyram1b@facebook.com');
+INSERT INTO employee (id, name, birthday, email) values (49, 'Anneliese Ringsell', '2000-07-29', 'aringsell1c@over-blog.com');
+INSERT INTO employee (id, name, birthday, email) values (50, 'Hillary Geraldi', '1993-10-25', 'hgeraldi1d@irs.gov');
+
+--3
+UPDATE employee
+ SET birthday = '1994-12-30'
+ WHERE birthday >= '1995-01-01'
+ AND id IN (
+  SELECT id FROM employee
+  ORDER BY birthday DESC
+  LIMIT 5
+ )
+ RETURNING *;
+
+--4
+DELETE from employee
+WHERE id < 6
+RETURNING *;
+```
