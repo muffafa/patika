@@ -179,3 +179,35 @@ WHERE rental_rate = 0.99;
 SELECT COUNT(DISTINCT replacement_cost) FROM film
 WHERE length > 150;
 ```
+
+## Ödev 7
+
+Aşağıdaki sorgu senaryolarını **dvdrental** örnek veri tabanı üzerinden gerçekleştiriniz.
+
+1. **film** tablosunda bulunan filmleri **rating** değerlerine göre gruplayınız.
+2. **film** tablosunda bulunan filmleri **replacement\_cost** sütununa göre grupladığımızda film sayısı 50 den fazla olan replacement\_cost değerini ve karşılık gelen film sayısını sıralayınız.
+3. **customer** tablosunda bulunan store\_id değerlerine karşılık gelen müşteri sayıları nelerdir?
+4. **city** tablosunda bulunan şehir verilerini **country\_id** sütununa göre gruplandırdıktan sonra en fazla şehir sayısı barındıran country\_id bilgisini ve şehir sayısını paylaşınız.
+
+## Cevap 7
+
+``` sql
+--1
+SELECT rating, COUNT(*) FROM film
+GROUP BY rating;
+
+--2 
+SELECT replacement_cost, COUNT(*) FROM film
+GROUP BY replacement_cost
+HAVING COUNT(*) > 50;
+
+--3
+SELECT store_id, COUNT(*) FROM customer
+GROUP BY store_id;
+
+--4 
+SELECT country_id, COUNT(*) FROM city
+GROUP BY country_id
+ORDER BY Count(*) DESC
+LIMIT 1;
+```
