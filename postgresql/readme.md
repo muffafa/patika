@@ -1,5 +1,13 @@
 # PostgreSQL Ödevler
 
+Bu dosya patikadaki sql kursunda yer alan örnek soruları ve onların çözümlerini içermektedir. SQL bilginizi teest etmek için kursu izlemeden de soruları çözmeyi deneyebilirsiniz. Database linki ve kurs linki aşağıda yer almaktadır.
+
+[Patika SQL KURSU](https://app.patika.dev/courses/sql)
+
+[dvdrental nedir?](https://www.postgresqltutorial.com/postgresql-getting-started/postgresql-sample-database/)
+
+[dvdrental veritabanı indirme linki](https://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip)
+
 ## Ödev 1
 
 Aşağıdaki sorgu senaryolarını **dvdrental** örnek veri tabanı üzerinden gerçekleştiriniz.
