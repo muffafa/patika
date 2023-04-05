@@ -322,3 +322,27 @@ INNER JOIN payment ON payment.customer_id = customer.customer_id;
 SELECT rental_id, first_name, last_name from rental
 INNER JOIN customer ON rental.customer_id = customer.customer_id;
 ```
+
+## Ödev 10
+
+Aşağıdaki sorgu senaryolarını **dvdrental** örnek veri tabanı üzerinden gerçekleştiriniz.
+
+1. **city** tablosu ile **country** tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz LEFT JOIN sorgusunu yazınız.
+2. **customer** tablosu ile **payment** tablosunda bulunan payment\_id ile customer tablosundaki first\_name ve last\_name isimlerini birlikte görebileceğimiz RIGHT JOIN sorgusunu yazınız.
+3. **customer** tablosu ile **rental** tablosunda bulunan rental\_id ile customer tablosundaki first\_name ve last\_name isimlerini birlikte görebileceğimiz FULL JOIN sorgusunu yazınız.
+
+## Cevaplar 10
+
+```sql
+--1
+SELECT city, country from city
+LEFT JOIN country ON country.country_id = city.country_id;
+
+--2
+SELECT payment_id, first_name, last_name from customer
+RIGHT OUTER JOIN payment ON customer.customer_id = payment.customer_id;
+
+--3
+SELECT rental_id, first_name, last_name FROM customer 
+FULL JOIN rental ON rental.customer_id = customer.customer_id;
+```
