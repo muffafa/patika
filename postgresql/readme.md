@@ -346,3 +346,66 @@ RIGHT OUTER JOIN payment ON customer.customer_id = payment.customer_id;
 SELECT rental_id, first_name, last_name FROM customer 
 FULL JOIN rental ON rental.customer_id = customer.customer_id;
 ```
+
+## Ödev 11
+
+Aşağıdaki sorgu senaryolarını **dvdrental** örnek veri tabanı üzerinden gerçekleştiriniz.
+
+1. **actor** ve **customer** tablolarında bulunan **first\_name** sütunları için tüm verileri sıralayalım.
+2. **actor** ve **customer** tablolarında bulunan **first\_name** sütunları için kesişen verileri sıralayalım.
+3. **actor** ve **customer** tablolarında bulunan **first\_name** sütunları için ilk tabloda bulunan ancak ikinci tabloda bulunmayan verileri sıralayalım.
+4. İlk 3 sorguyu tekrar eden veriler için de yapalım.
+
+## Cevaplar 11
+
+```sql
+--1
+(SELECT first_name FROM actor)
+UNION 
+(SELECT first_name FROM customer)
+
+--2
+(SELECT first_name FROM actor)
+INTERSECT 
+(SELECT first_name FROM customer)
+
+--3
+(SELECT first_name FROM actor)
+EXCEPT
+(SELECT first_name FROM customer)
+
+--4
+    --last_name
+        --a
+        (SELECT last_name FROM actor)
+        UNION 
+        (SELECT last_name FROM customer)
+
+
+        --b
+        (SELECT last_name FROM actor)
+        INTERSECT 
+        (SELECT last_name FROM customer)
+
+        --c
+        (SELECT last_name FROM actor)
+        EXCEPT
+        (SELECT last_name FROM customer)
+
+    --last_update
+        --a
+        (SELECT last_update FROM actor)
+        UNION 
+        (SELECT last_update FROM customer)
+
+
+        --b
+        (SELECT last_update FROM actor)
+        INTERSECT 
+        (SELECT last_update FROM customer)
+
+        --c
+        (SELECT last_update FROM actor)
+        EXCEPT
+        (SELECT last_update FROM customer)
+```
