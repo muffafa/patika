@@ -409,3 +409,54 @@ EXCEPT
         EXCEPT
         (SELECT last_update FROM customer)
 ```
+
+## Ödev 12
+
+Aşağıdaki sorgu senaryolarını **dvdrental** örnek veri tabanı üzerinden gerçekleştiriniz.
+
+1. **film** tablosunda film uzunluğu **length** sütununda gösterilmektedir. Uzunluğu ortalama film uzunluğundan fazla kaç tane film vardır?
+2. **film** tablosunda en yüksek rental\_rate değerine sahip kaç tane film vardır?
+3. **film** tablosunda en düşük rental\_rate ve en düşün replacement\_cost değerlerine sahip filmleri sıralayınız.
+4. **payment** tablosunda en fazla sayıda alışveriş yapan müşterileri(customer) sıralayınız.
+
+## Cevaplar 12
+
+```sql
+--1
+--SELECT AVG(length) from film; --115.272
+--SELECT * from film WHERE length > 115.272; --489
+SELECT COUNT(*) FROM film
+WHERE length > 
+(
+SELECT AVG(length) From film
+);
+
+--2
+--SELECT * from film ORDER BY rental_rate DESC; --4.99
+--SELECT * from film WHERE rental_rate = 4.99; --336
+SELECT COUNT(*) FROM film
+WHERE rental_rate =
+(
+SELECT MAX(rental_rate) From film
+);
+
+--3
+SELECT title, replacement_cost, rental_rate from film 
+WHERE rental_rate = 
+(
+SELECT MIN(rental_rate) from film
+) 
+AND replacement_cost =
+(
+SELECT MAX(replacement_cost) from film
+);
+
+--4
+SELECT first_name, last_name from customer
+WHERE customer_id = ANY
+(
+SELECT COUNT(customer_id) AS shoping_counter  from payment
+GROUP BY customer_id
+ORDER BY shoping_counter DESC
+);
+````
