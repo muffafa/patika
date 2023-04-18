@@ -16,6 +16,11 @@ contract Counter {
     uint public subtracted = 0;
     uint public multiplied = 0;
     uint public divided = 0;
+
+    modifier dividerCannotBeZero(uint divider) {
+        require(divider != 0, "divider cannot be zero");
+        _;
+    }
     
     function add(uint val1, uint val2) public {
         total = val1 + val2;
@@ -29,7 +34,7 @@ contract Counter {
         multiplied = val1 * val2;
     }
 
-    function dvide(uint val1, uint val2) public {
+    function dvide(uint val1, uint val2) public dividerCannotBeZero(val2) {
         divided = val1 / val2;
     }
 
