@@ -5,8 +5,8 @@ const methodOverride = require('method-override')
 
 const ejs = require('ejs')
 
-const photoController = require('../controllers/photoController')
-const pageController = require('../controllers/pageController')
+const photoController = require('./controllers/photoController')
+const pageController = require('./controllers/pageController')
 
 const app = express()
 const port = process.env.PORT || 5001
