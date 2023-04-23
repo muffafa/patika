@@ -9,9 +9,14 @@ const photoController = require('./controllers/photoController')
 const pageController = require('./controllers/pageController')
 
 const app = express()
-const port = 3000
+const port = process.env.PORT || 5001
 
-mongoose.connect('mongodb://localhost/pcat-test-db')
+mongoose.connect('mongodb+srv://mmsavar:sftrS62aP1j9Sub6@cluster0.79vtxkq.mongodb.net/pcat-db?retryWrites=true&w=majority')
+  .then(()=> {
+    console.log('mongodb connected successfully')
+  }).catch(err => {
+    console.error(err)
+  })
 
 app.set('view engine', 'ejs')
 
