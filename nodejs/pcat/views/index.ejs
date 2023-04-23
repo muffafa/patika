@@ -8,7 +8,7 @@
 
             <div class="tm-welcome-container text-center text-white">
                 <div class="tm-welcome-container-inner">
-                    <p class="tm-welcome-text mb-1 text-white">Video Catalog is brought to you by TemplateMo.</p>
+                    <p class="tm-welcome-text mb-1 text-white">Photo Catalog is brought to you by TemplateMo.</p>
                     <p class="tm-welcome-text mb-5 text-white">This is a full-width video banner.</p>
                     <a href="#content" class="btn tm-btn-animate tm-btn-cta tm-icon-down">
                         <span>Discover</span>
@@ -65,13 +65,17 @@
 
                     <!-- Catalog Paging Buttons -->
                     <div>
-                        <ul class="nav tm-paging-links">
-                            <li class="nav-item active"><a href="#" class="nav-link tm-paging-link">1</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link tm-paging-link">2</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link tm-paging-link">3</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link tm-paging-link">4</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link tm-paging-link">></a></li>
-                        </ul>
+                        <% if(totalPageNumber > 0) { %>
+                            <ul class="nav tm-paging-links">
+                                <% for (let i = 1; i <= totalPageNumber; i++) { %>
+                                    <% if (i == currentPage) { %>
+                                        <li class="nav-item active"><a href="/?page=<%= i %>" class="nav-link tm-paging-link"><%= i %></a></li>
+                                    <% } else {%>
+                                        <li class="nav-item"><a href="/?page=<%= i %>" class="nav-link tm-paging-link"><%= i %></a></li>
+                                    <% } %>
+                                <% } %>
+                            </ul>
+                        <% } %>
                     </div>
                 </main>
 
