@@ -26,7 +26,7 @@
 
         <% posts.forEach( (post) => { %>
           <div class="post-preview">
-            <a href="/post">
+            <a href="/posts/<%= post._id %>">
               <h2 class="post-title"> <%= post.title %> </h2>
               <h3 class="post-subtitle"> <%= post.detail %> </h3>
             </a>
