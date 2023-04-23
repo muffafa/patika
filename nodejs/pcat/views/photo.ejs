@@ -22,7 +22,9 @@
 				<main>
 					<div class="row mb-5 pb-4">
 						<div class="col-12">
-							<img src="<%= photo.image %> " alt="Image" class="img-fluid tm-catalog-item-img">
+							<div class="d-flex justify-content-center">
+								<img src="<%= photo.image %> " alt="Image" class="img-fluid tm-catalog-item-img">
+							</div>
 						</div>
 					</div>
 					<div class="row mb-5 pb-5">
@@ -37,10 +39,10 @@
 							<!-- Share box -->
 							<div class="tm-bg-gray tm-share-box">
 								<div class="text-center">
-									<button class="btn btn-primary p-0 mb-4 tm-btn-animate tm-btn-download tm-icon-download"><span>Update Details</span></button>	
+									<a href="./edit/<%= photo._id %>" class="btn btn-primary p-0 mb-4 tm-btn-animate tm-btn-download tm-icon-download"><span>Update Details</span></a>	
 								</div>	
 								<div class="text-center">
-									<button class="btn btn-danger p-0 tm-btn-animate tm-btn-download tm-icon-download"><span>Delete Photo</span></button>	
+									<a class="btn btn-danger p-0 tm-btn-animate tm-btn-download tm-icon-download"><span>Delete Photo</span></a>	
 								</div>								
 							</div>
 						</div>
