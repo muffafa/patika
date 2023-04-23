@@ -1,57 +1,42 @@
-const express = require('express')
-const mongoose = require('mongoose')
+const express = require("express")
+const mongoose = require("mongoose")
+const methodOverride = require("method-override")
 
-const ejs = require('ejs')
-const path = require('path')
+const ejs = require("ejs")
 
-const Post = require('./models/Post')
+//Controllers
+const postController = require("./controllers/postController")
+const pageController = require("./controllers/pageController")
 
 const app = express()
 const port = 4000
 
+//Database connect
+mongoose.connect("mongodb://localhost/cleanblog-test-db")
 
-mongoose.connect('mongodb://localhost/cleanblog-test-db')
+//Middlewares
+app.set("view engine", "ejs")
 
-app.set('view engine', 'ejs')
-
-app.use(express.static('public'))
+app.use(express.static("public"))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
+app.use(
+  methodOverride("_method", {
+    methods: ["POST", "GET"],
+  })
+)
 
-app.get('/', async (req, res) => {
-    // const blog = { id: 1, title: "Blog title", description: "Blog description" }
-    // res.send(blog)
-    const posts = await Post.find({})
-    res.render('index', {
-        posts
-    })
-})
+//Route
+app.get("/", postController.getAllPosts)
+app.get("/posts/:id", postController.getPost)
+app.post("/posts", postController.createPost)
+app.delete("/posts/:id", postController.deletePost)
+app.put("/posts/:id", postController.updatePost)
 
-app.get('/posts/:id', async (req, res) => {
-    const post = await Post.findById(req.params.id)
-    res.render('post', {
-        post
-    })
-})
-
-app.get('/about', (req, res) => {
-    res.render('about')
-})
-
-app.get('/post', (req, res) => {
-    res.render('post')
-})
-
-app.get('/add_post', (req, res) => {
-    res.render('add_post')
-})
-
-app.post('/blogs', async (req, res) => {
-    //res.sendFile(path.resolve(__dirname, 'temp/index.html'))
-    await Post.create(req.body)
-    res.redirect('/')
-})
+app.get("/about", pageController.getAboutPage)
+app.get("/add_post", pageController.getAddPage)
+app.get("/edit/:id", pageController.getEditPage)
 
 app.listen(port, () => {
-    console.log(`listening on ${port}`)
+  console.log(`listening on ${port}`)
 })
