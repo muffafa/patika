@@ -7,9 +7,9 @@
     <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/muffafa?style=social">
   </a>
 
-  <sub>Author:
+  <sub>Yazar:
     <a href="https://linktr.ee/muffafa" target="_blank">Muhammed Mustafa (muffafa) Savar</a><br>
-    <small> Jun, 2023</small>
+    <small> Haziran, 2023</small>
   </sub>
 
 ---
