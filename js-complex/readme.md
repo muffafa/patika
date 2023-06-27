@@ -16,7 +16,9 @@
 
 ## 🙋🏻 Giriş
 
-Merhaba bu repoda Arin Yazılım tarafından yayımlanan JavaScript Karmaşası serisi ile JS' in zor ve kafa karıştırıcı yanlarını öğreneceğiz. Bu repo benim ders notlarımdan oluşmaktadır. Serinin hepsi için [şuraya](https://www.youtube.com/playlist?list=PL-Hkw4CrSVq-lamHDwl1J1oI4nwCYYW30) göz atın.
+Merhaba bu repoda Arin Yazılım tarafından yayımlanan JavaScript Karmaşası serisi ile JS' in zor ve kafa karıştırıcı yanlarını öğreneceğiz. Bu repo benim ders notlarımdan oluşmaktadır.
+
+Serinin hepsi için 🔗 [şuraya](https://www.youtube.com/playlist?list=PL-Hkw4CrSVq-lamHDwl1J1oI4nwCYYW30) göz atın.
 
 🚨 Repoyu okumadan önce giriş dersine de göz atabilirsiniz. 🔗 [JavaScript Karmaşası : 00 : JavaScript Tarihi ve Versiyon Karmaşası](https://youtu.be/99uPfA4Hv0Q)
 
