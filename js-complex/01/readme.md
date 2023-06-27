@@ -2,6 +2,10 @@
 
 [<< Anasayfa](../readme.md)
 
+## 🔗 Ders Videosu
+
+[JavaScript Karmaşası : 01 : Const vs Let vs Var, Hoisting Nedir?, "Değiştirmek" vs "Atamak"](https://youtu.be/GFyELl7fdmU)
+
 ## 😜 let
 
 `Blockscope` ve değişebilen değişkenler için kullanılır
