@@ -189,4 +189,4 @@ var x = 5
 console.log(x) // 5
 ```
 
-[<< Anasayfa](../readme.md) | [Gün 2 >>](../02/readme.md)
+[<< Anasayfa](../readme.md) | [Ders 2 >>](../02/readme.md)
