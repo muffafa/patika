@@ -20,7 +20,8 @@ Merhaba bu repoda Arin Yazılım tarafından yayımlanan JavaScript Karmaşası 
 
 Serinin hepsi için 🔗 [şuraya](https://www.youtube.com/playlist?list=PL-Hkw4CrSVq-lamHDwl1J1oI4nwCYYW30) göz atın.
 
-🚨 Repoyu okumadan önce giriş dersine de göz atabilirsiniz. 🔗 [JavaScript Karmaşası : 00 : JavaScript Tarihi ve Versiyon Karmaşası](https://youtu.be/99uPfA4Hv0Q)
+🚨 Repoyu okumadan önce giriş dersine de göz atabilirsiniz. <br>
+🔗 [JavaScript Karmaşası : 00 : JavaScript Tarihi ve Versiyon Karmaşası](https://youtu.be/99uPfA4Hv0Q)
 
 Her dersin en üst kısımında ilgili ders videosu bulunur.
 
