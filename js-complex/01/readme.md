@@ -1,4 +1,4 @@
-# var, let, const karmaşası
+# Const vs Let vs Var, Hoisting Nedir?, "Değiştirmek" vs "Atamak"
 
 [<< Anasayfa](../readme.md)
 
@@ -71,11 +71,11 @@ const name = "Muhammed Mustafa"
 console.log("Your name is ", name) // Your name is Muhammed Mustafa
 
 name = "Muffafa"
-console.log("Your name is ", name) // gives error message ❌
+console.log("Your name is ", name) // ❌ Uncaught TypeError: Assignment to constant variable.
 ```
 
 ``` javascript
-const name; // declearation without inital value is not valid ❌
+const name; // ❌ SyntaxError: Missing initializer in const declaration
 
 name = "Muhammed Mustafa"
 console.log("Your name is ", name)
@@ -109,7 +109,8 @@ const student = {
 }
 console.log(student)
 
-// it throws an error because you cannot asign new refference to it ❌
+// it throws an error because you cannot asign new refference to it 
+// ❌ TypeError: Assignment to constant variable.
 student = { 
     name: "Muffafa",
     age: 23
@@ -128,7 +129,7 @@ console.log(student)
 
 Object.freeze(student)
 
-student.name = "Muffafa" // it does not throw an error but value is not changed
+student.name = "Muffafa" // ⚠️ it does not throw an error but value is not changed
 console.log(student) // student.name => "Muhammed Mustafa"
 ```
 
@@ -161,7 +162,7 @@ console.log("Your current age is ", age) // 18
 
 ``` javascript
 var x = 5
-console.log(window.x) // 5 becuse it is a global variable 
+console.log(window.x) // 5: becuse it is a global variable 
 ```
 
 ## 🤯 Hoisting
@@ -174,7 +175,7 @@ console.log(x) // 5
 ```
 
 ``` javascript
-console.log(x) // throws exception reffernce error ❌
+console.log(x) // ❌ ReferenceError: x is not defined
 ```
 
 ``` javascript
