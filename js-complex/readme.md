@@ -33,8 +33,9 @@ Repoyu klonlayıp, pull request atarak yazım yanlışlarını düzeltebilir, ek
 
 ## 😎 Notlar
 
-| Numara | Ders                                                                                      |
-| ------ | :---------------------------------------------------------------------------------------- |
-| 01     | [Const vs Let vs Var, Hoisting Nedir?, "Değiştirmek" vs "Atamak"](./01/readme.md)         |
-| 02     | [Fonksiyonlar, Declaration vs Expression, IIFE, First-Class Fonksiyonlar](./02/readme.md) |
-| 03     | [Object Part I, this, Constructor Function, new Object(), create](./03/readme.md)         |
+| Numara | Ders                                                                                         |
+| ------ | :------------------------------------------------------------------------------------------- |
+| 01     | [Const vs Let vs Var, Hoisting Nedir?, "Değiştirmek" vs "Atamak"](./01/readme.md)            |
+| 02     | [Fonksiyonlar, Declaration vs Expression, IIFE, First-Class Fonksiyonlar](./02/readme.md)    |
+| 03     | [Object Part I, this, Constructor Function, new Object(), create](./03/readme.md)            |
+| 04     | [Object Part II, Prototype nedir?, Inheritance, Basic Object, \_\_proto\_\_](./04/readme.md) |

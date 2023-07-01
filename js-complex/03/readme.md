@@ -206,4 +206,4 @@ console.log(muffafa.age); // 22
 console.log(muffafa.fullName()); // Muhammed Mustafa Savar
 ```
 
-[<< Ders 2](../02/readme.md)
+[<< Ders 2](../02/readme.md) | [Ders 4 >>](../04/readme.md)
