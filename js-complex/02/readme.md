@@ -183,4 +183,4 @@ function(){
 > ```
 >
 
-[<< Ders 1](../01/readme.md)
+[<< Ders 1](../01/readme.md) | [Ders 3 >>](../03/readme.md)
