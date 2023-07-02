@@ -10,4 +10,4 @@
 
 
 
-[<< Ders 10](..//readme.md)
+[<< Ders 10](../10/readme.md)
