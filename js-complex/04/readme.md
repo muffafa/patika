@@ -132,4 +132,4 @@ console.log(arin.hasOwnProperty("surname")); // false
 console.log("surname" in arin); // true
 ```
 
-[<< Ders 3](../03/readme.md)
+[<< Ders 3](../03/readme.md) | [Ders 5 >>](../05/readme.md)

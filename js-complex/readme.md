@@ -39,3 +39,10 @@ Repoyu klonlayıp, pull request atarak yazım yanlışlarını düzeltebilir, ek
 | 02     | [Fonksiyonlar, Declaration vs Expression, IIFE, First-Class Fonksiyonlar](./02/readme.md)    |
 | 03     | [Object Part I, this, Constructor Function, new Object(), create](./03/readme.md)            |
 | 04     | [Object Part II, Prototype nedir?, Inheritance, Basic Object, \_\_proto\_\_](./04/readme.md) |
+| 05     | [Object Part III, Destructuring, Spread, Rest, Yeni Söz Dizimleri](./05/readme.md)           |
+| 06     | [Class Part I, Neden Class?, Constructor Metodu](./06/readme.md)                             |
+| 07     | [Class Part II, Inheritance, Instance, Subclass, Super, Extends](./07/readme.md)             |
+| 08     | ["THIS"](./08/readme.md)                                                                     |
+| 09     | [ARROW Function - "OK Fonksiyonu"](./09/readme.md)                                           |
+| 10     | [Senkron - Asenkron JS, Call Stack, Thread, Callback Fonsiyonlar](./10/readme.md)            |
+| 11     | [PROMISE...](./11/readme.md)                                                                 |
